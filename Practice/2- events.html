@@ -1,0 +1,43 @@
+<!Doctype html>
+<html>
+ <head>
+  <title> JS events</title>
+  <script>
+   function sayIt()
+   {
+     //alert("WELCOME");
+   }
+   
+   function changeTxt()
+   {
+    var heading=document.getElementById('heading')
+	heading.innerHTML="Cursor is here";
+   }
+   
+   function changeTxtBack()
+   {
+    var heading=document.getElementById('heading')
+	heading.innerHTML="This is a heading";
+   }
+   
+   function focusIn()
+   {
+    alert("I'm in the field");
+   }
+   
+   function blurOut()
+   {
+    alert("I'm out of the field");
+   }
+  </script>
+ </head>
+ <body onload="return sayIt()">
+ <h1 id='heading' onmouseover="return changeTxt()" onmouseout="return changeTxtBack()">This is a heading</h1>
+ <button onclick="return sayIt()">Click me!</button>
+ <form>
+	Name: <input onfocus="return focusIn()" onblur="return blurOut()" type="text" name="name"> <br/>
+	<input type="submit" value="Submit"/>
+ </form>
+ </body>
+</html>
+ 
